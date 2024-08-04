@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!-- Last Published: Thu Nov 16 2023 09:41:06 GMT+0000 (Coordinated Universal Time) -->
+<html >
+
+<head>
+    <meta charset="utf-8" />
+    <title>Shuffling Typography Animation [Codrops]</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link href="https://assets-global.website-files.com/643293f92bb6b4e6e99bca79/css/shuffling-typography-animation-codrops.6fc56956f.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+</head>
+
+<body>
+
+    <div class="page-wrapper">
+        <div class="css w-embed">
+            <style>
+                *,
+                *::after,
+                *::before {
+                	box-sizing: border-box;
+                }
+                
+                body {
+                  -webkit-font-smoothing: antialiased;
+                  -moz-osx-font-smoothing: grayscale;
+                  font-smoothing: antialiased;
+                  text-rendering: optimizeLegibility;
+                }
+                
+                .ascii {
+                	pointer-events: none;
+                }
+                
+                .splitting .words .word {
+                	white-space: nowrap;
+                }
+            </style>
+        </div>
+        <header class="header">
+            <h1 class="header__title">Type Shuffle Animation based on <a href="http://lcd.ertdfgcvb.xyz/" target="_blank" class="header__link">LCD 1</a></h1></header>
+        <main class="main-wrapper">
+            <div class="ascii w-embed"><pre>
+          .'   .*'   `*.   `. ; / .'    .*'`-.
+        .'   .'         \    \ : /   .*'      `-.
+       /    /            ,   ',          -.      `.
+      /    /      _.._   :   '.   .-*""*-.    `.   \
+     /   .'    .-'    `-.   '/ .'         `-.   \   \
+    ,  ,'   .'   .*""*-.\,: ,.-*"*-.        `.       .
+      /   .'   .'       `  `        `.        `.
+   '     /    /                       `.        \ .   `
+  ,     .    /                          \        \ `   ;
+  :         ,                            \    :   \ `  :
+  ;    .                                  \    .   \ \ |
+  | '  :   ,                               .    \   ; ;:
+  |:   ;                                      `  \  : ;|
+  ||   |  ;                                 .     ; ; ;;
+  ;:   |  |                                    `  ; | ||
+  L.\  |  |  .d$$s.                    .s$$b..  ; : |.:J
+ / __`';  | *'   `*Tb._            _.dP*'   `*  | | :__ \
+..' .`.:  |         `*Ts'        `sP*'        ; |   '. `,,
+;  /   ,  ;   .+s**s.   `.           .s**s+.  :_;-.'  \  :
+: ,   /:; :   \ *ss* \    ;         / *ss* /    +: \   . ;
+ .`  :  :  ,  .+s$$$s+.            .+s$$$s+.  .* ;  ;  ',
+  \   *.   ;*d$P*"$$$T$b  ,+**+,  d$P*"$$$T$b*   .*    /
+   \     ; ::$; +:$$$:$$;*      *:$; +:$$$:$$;  :     /
+         :   T$b._$$$d$P          T$b._$$$d$P   ;
+     `._.;  ; `*T$$$P*'            `*T$$$P*'    :._.'
+         |; :             '                     |   `.
+         ;:  \           :.     ,               : `.  \
+         ` \  `._        `*.__.*'               '   \  \
+          . *--*'           ""                 ,     ;  .
+           \                                  / .       :
+            \          .+*"*--*"*+.          /   `      |
+             `.       :._.--..--._.;       .';    ;  :  ;
+               ;.      `.        .'      .'  |    |  ,
+               : `.      `*----*'      .'    |    |    :
+               |   `.                .'      |    :   .
+               :     `.            .'        :    '  / `.
+              /        `-.      .-'          /`. / .'    `.
+             /            `****'            .        `.    \
+           .'                              ,    '  \   \    \
+        _.'                                    /    :   .    ,
+   _.-*' `.                               :   :     |   :    :
+           `-.                                .         ;    |
+              `-.                        .-`           ,     ;
+                 `.     `.     .*      .'   `.   `.  .'     ,
+                   `.     `-  '      .'       `.          .'
+                     `.            .'          `+._     / `.
+                       `.        .'             :     / .    \
+                         `.    .'               |    :  ;     .
+                           `..'                 :    ;    `   ;
+                                                 .   :     ;  :
+                                                  \   `   /   ;
+                                                   `.  \     /
+                                                     `-.\  .'
+		</pre></div>
+            <div class="content">
+              <div>author</div>
+              <div>jaskirat</div>
+               
+            </div>
+            <div class="effects"><a data-fx="1" href="#" class="button w-button">[ Effect 1 ]</a><a data-fx="2" href="#" class="button w-button">[ Effect 2 ]</a><a data-fx="3" href="#" class="button w-button">[ Effect 3 ]</a><a data-fx="4" href="#" class="button w-button">[ Effect 4 ]</a>
+                <a
+                data-fx="5" href="#" class="button w-button">[ Effect 5 ]</a><a data-fx="6" href="#" class="button w-button">[ Effect 6 ]</a></div>
+        </main>
+        
+    </div>
+    
+      
+    <script src="shuffle.js"></script>
+    <script>
+      const textElement = document.querySelector(".content");
+        document.addEventListener("DOMContentLoaded", fun);
+        function fun(){
+    
+  
+    const ts = new TypeShuffle(textElement);
+    ts.trigger("fx1");
+  
+    textElement.addEventListener("mouseover", () => {
+        ts.trigger(`fx${6}`);
+      });
+    
+  };
+    </script>
+
+    <!-- You can find the complete JS code on Code Sandbox: https://shorturl.at/cefJ5 -->
+</body>
+
+</html>
